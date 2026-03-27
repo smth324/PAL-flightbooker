@@ -8,7 +8,6 @@ const Admin = lazy(() => import('./components/AdminMain'))
 
 const App = () => {
   const notification = useSelector((state) => state.notification)
-
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Notification msg={notification} />

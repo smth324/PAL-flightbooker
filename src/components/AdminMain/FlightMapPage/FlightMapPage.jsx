@@ -11,7 +11,7 @@ const FlightMapPage = ({ flights }) => {
   }
   const [currRoute, setRoute] = useState('')
   const [flightCount, setFlightCount] = useState('')
-  mapboxgl.accessToken = 'pk.eyJ1IjoidG9tc21pdGg4MyIsImEiOiJjbDR3amg0dngwZnd2M3FxczAxdTJiYTNiIn0.MkEz6KZXSbiLcOBUv0dQZw'
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic210aDMyNCIsImEiOiJjbW44aTQ0cGcwYW84MnFxdHpnOTl2NHB0In0.4eHcPoYafLxJYRy0NWIagw'
   const mapContainer = useRef(null)
   const map = useRef(null)
   const [lng, setLng] = useState(122.56)
@@ -57,14 +57,14 @@ const FlightMapPage = ({ flights }) => {
         splicedOrigin.forEach((y) => {
           orgSearch = `${orgSearch + y}%20`
         })
-        originToSearch.push(fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${orgSearch}.json?access_token=pk.eyJ1IjoidG9tc21pdGg4MyIsImEiOiJjbDR3amg0dngwZnd2M3FxczAxdTJiYTNiIn0.MkEz6KZXSbiLcOBUv0dQZw`))
+        originToSearch.push(fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${orgSearch}.json?access_token=pk.eyJ1Ijoic210aDMyNCIsImEiOiJjbW44aTQ0cGcwYW84MnFxdHpnOTl2NHB0In0.4eHcPoYafLxJYRy0NWIagw`))
 
         const splicedDestinations = summarizedRoutes[i].destination.split('(')[0].slice(0, -1).split(' ')
         let destinationSearch = ''
         splicedDestinations.forEach((y) => {
           destinationSearch = `${destinationSearch + y}%20`
         })
-        destinationToSearch.push(fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${destinationSearch}.json?access_token=pk.eyJ1IjoidG9tc21pdGg4MyIsImEiOiJjbDR3amg0dngwZnd2M3FxczAxdTJiYTNiIn0.MkEz6KZXSbiLcOBUv0dQZw&language=en`))
+        destinationToSearch.push(fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${destinationSearch}.json?access_token=pk.eyJ1Ijoic210aDMyNCIsImEiOiJjbW44aTQ0cGcwYW84MnFxdHpnOTl2NHB0In0.4eHcPoYafLxJYRy0NWIagw&language=en`))
       }
       const returnedOriginCoords = await Promise.all(originToSearch)
       const returnedDestinationCoords = await Promise.all(destinationToSearch)
