@@ -33,3 +33,5 @@ You also need a to make .env file for this app.
 SECRET
 PORT
 DATABASE_URL
+
+## Screenshots
