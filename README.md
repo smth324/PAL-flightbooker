@@ -1,17 +1,50 @@
-Hello, this is my first personal project, so any points of improvement or suggestions 
-would be well appreciated!
+# Airline Booking System (Full-Stack Web App)
 
-Through this website, customers can choose where they want to go, from where, cabin class, and travel dates, and the 
-website will automatically find flights for them with a clean calendar, price calculator, and visual seat selector. The 
-Admin can then create new travel destinations, charter new flight routes, create promotional codes, view current flights 
-through a map, and create new plane models via a visual editor.
-The /Admin panel can only be accessed with an account.
-(username=william, password=asdasdasd)
+A full-stack airline booking platform based off the old PAL Website that enables users to search, compare, and book flights through an interactive interface, while providing administrators with tools to manage routes, pricing, and aircraft configurations.
+
+
+
+## Key Features
+
+### User Features
+- Search flights by origin, destination, travel dates, and cabin class  
+- Dynamic pricing calendar for comparing fares across dates  
+- Interactive seat selection system with visual layout  
+- Real-time price calculation based on selections  
+
+### Admin Features
+- Create and manage flight routes and destinations  
+- Generate and apply promotional codes  
+- Monitor active flights through map visualization  
+- Design aircraft seat configurations using a visual editor  
+
+
 
 ## Tech Stack
-This app uses React, Redux, React Router, Axios, MUI for the Admin Page, Cypress
-for E2E testing, and Mapbox GL API for constructing maps. It also uses Node.js and express.js for the backend,
-and JWT and bcryptjs for authentication, along with Sequelize and a PostgreSQL database.
+
+### Frontend
+- React  
+- Redux  
+- React Router  
+- Material UI (Admin dashboard)  
+
+### Backend
+- Node.js  
+- Express.js  
+- RESTful API architecture  
+
+### Database & Authentication
+- PostgreSQL  
+- Sequelize ORM  
+- JWT authentication  
+- bcrypt password hashing  
+
+### Other Tools
+- Axios (API communication)  
+- Cypress (end-to-end testing)  
+- Mapbox GL API (map visualization)  
+
+
 
 
 ## Available Scripts for the Frontend:
